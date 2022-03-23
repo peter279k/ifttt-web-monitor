@@ -47,5 +47,11 @@ $json = [
 
 curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($json));
 curl_setopt($curl, CURLOPT_HTTPHEADER, ['Content-Type:application/json']);
-curl_exec($curl);
+$response = curl_exec($curl);
 curl_close($curl);
+
+$responseInfo = curl_getinfo($curl);
+
+if ($responseInfo['http_code'] === 200) {
+    echo $response, PHP_EOL;
+}
