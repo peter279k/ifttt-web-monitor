@@ -27,6 +27,7 @@ $monitoredUrl = substr($settings[0], 4);
 $makerServiceUrl = substr($settings[1], 24);
 
 $curl = curl_init($monitoredUrl);
+curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 $response = curl_exec($curl);
 $responseInfo = curl_getinfo($curl);
 
