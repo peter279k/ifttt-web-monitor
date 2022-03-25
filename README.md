@@ -1,5 +1,7 @@
 # ifttt-web-monitor
 
+![IFTTT Web Monitor Architecture](https://i.imgur.com/8c4Lkbe.png)
+
 ## Usage
 
 - Ensure that PHP is installed and the PHP cURL extension already has been enabled.
